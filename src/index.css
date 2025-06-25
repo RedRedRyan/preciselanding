@@ -1,44 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap");
+
 @import "tailwindcss";
 
-@font-face{
-    font-family: 'Ubuntu Bold ';
-    src: url('/fonts/Ubuntu/Ubuntu-Bold.ttf') format('truetype');
+@font-face {
+    font-family: "Modern Negra";
+    src: url("/fonts/Modern Negra Demo.ttf") format("truetype");
 }
 
-@theme{
-    --color-red : #ff0000;
-    --color-dimgrey : #696969;
-    --color-white : #ffffff;
-    --color-orange : #ff8c00;
-    --color-black : #000000;
-    --font-ubuntu-bold : 'Ubuntu Bold', sans-serif;
-    --font-ubuntu : 'Ubuntu', sans-serif;
+@theme {
+    --color-yellow: #e7d393;
+    --color-white-100: #efefef;
+    --font-sans: "Mona Sans", sans-serif;
+    --font-modern-negra: "Modern Negra", sans-serif;
+    --font-serif: "DM Serif Text", serif;
 }
-  
+
 html,
 body {
     width: 100%;
     background-color: black;
-    color: orange;
+    color: white;
     scroll-behavior: smooth;
-    overflow-x: hidden; 
+    overflow-x: hidden;
 }
 
 @utility flex-center {
-  @apply flex items-center justify-center;
+    @apply flex justify-center items-center;
 }
 
 @utility col-center {
-  @apply flex items-center justify-center flex-col;
+    @apply flex flex-col justify-center items-center;
 }
 
 @utility abs-center {
-  @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
 }
 
 @utility text-gradient {
-    background: linear-gradient(to bottom, #ffffff, #ff8c00  );
+    background: linear-gradient(to bottom, #ffffff, #898989);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -46,32 +45,34 @@ body {
 
 @utility radial-gradient {
     background: radial-gradient(
-        circle at center,
-        #ff0000 0%,
-        #000 50%,
-        transparent 100%
+            circle at center,
+            #434343 0%,
+            #000 50%,
+            transparent 100%
     );
 }
 
 @utility masked-img {
-    mask-image: url('/images/mask-img.png');
-    mask-repeat : no-repeat;
+    mask-image: url("/images/mask-img.png");
+    mask-repeat: no-repeat;
     mask-position: center;
     mask-size: 50%;
 }
 
 @layer components {
-    main{
+    main {
         @apply w-full overflow-x-hidden;
     }
+
     nav {
         @apply fixed z-50 w-full;
 
         div {
             @apply flex md:flex-row flex-col md:justify-between items-center gap-5 py-5 lg:px-0 px-5 container mx-auto;
         }
+
         p {
-            @apply --font-ubuntu-bold text-3xl -mb-2;
+            @apply font-modern-negra text-3xl -mb-2;
         }
 
         a {
@@ -85,7 +86,6 @@ body {
 
     .noisy {
         @apply absolute inset-0 size-full bg-[url("/images/noise.png")];
-    }
     }
 
     #hero {
@@ -373,4 +373,4 @@ body {
             @apply absolute bottom-0 right-0 lg:w-96 w-1/3 pointer-events-none;
         }
     }
-
+}
