@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import gsap from 'gsap';
 import Cocktails from './components/Cocktails';
+import About from './components/About';
 
 
 
@@ -16,6 +17,7 @@ const App = () => {
       <Navbar />
       <Hero />
       <Cocktails />
+      <About />
     </main>
   ) 
 }

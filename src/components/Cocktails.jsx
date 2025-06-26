@@ -17,8 +17,8 @@ useGSAP(()=>{
         .from('#c-left-leaf',{
             x:-100, y:100
     })
-    .from('#c-left-leaf',{
-        x:100, y:100
+        .from('#c-left-leaf',{
+            x:100, y:100
     })
 })
   return (
