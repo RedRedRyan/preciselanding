@@ -7,7 +7,6 @@ import { useRef } from 'react';
 
 const Hero = () => {
   const videoRef = useRef();
-  const videoTimelineRef =useRef()
   const isMobile = useMediaQuery({maxWidth: 767});
 
   useGSAP(() => {
@@ -22,7 +21,7 @@ const Hero = () => {
       ease: 'expo.out',
       stagger: 0.05,
     });
-
+    
     gsap.from(paragraphSplit.lines, {
       opacity: 0,
       yPercent: 100,
@@ -31,7 +30,7 @@ const Hero = () => {
       stagger: 0.05,
       delay: 1,
     });
-
+    
     // Leaf animations
     gsap.timeline({
       scrollTrigger: {
@@ -47,30 +46,38 @@ const Hero = () => {
     // Video animation timeline
     const startValue = isMobile ? 'top 50%' : 'center 60%';
     const endValue = isMobile ? '120% top' : 'bottom top';
-
+    
     // Create a timeline for video animation
-    const tl = gsap.timeline({
+    gsap.timeline({
       scrollTrigger: {
-        trigger: 'video',
+        trigger: '#hero',
         start: startValue,
         end: endValue,
         scrub: true,
-        pin: true,
       }
     })
-    videoRef.current.onloadedmetadata = () => {
-      tl.to(videoRef.current, {
-        currentTime: videoRef.current.duration,
-      })
-    }
-
+    .fromTo(videoRef.current, 
+      { 
+        scale: 1.2,
+        opacity: 0.5
+      }, 
+      { 
+        scale: 1,
+        opacity: 1,
+        duration: 2
+      }, 0)
+    .to(videoRef.current, 
+      { 
+        y: isMobile ? 50 : 100,
+        duration: 3
+      }, 0.5);
   }, []);
 
   return (
     <> 
       <section id="hero" className="noisy">
         <h1 className="title">maji</h1>
-
+        
         <img
           src="/images/hero-left-leaf.png"
           alt="left-leaf"
@@ -81,10 +88,10 @@ const Hero = () => {
           alt="right-leaf"
           className="right-leaf"
         />
-
+        
         <div className="body">
           {/* <img src="/images/arrow.png" alt="arrow" className="arrow" /> */}
-
+          
           <div className="content">
             <div className="space-y-20 hidden md:block">
               <p>Cool. Crisp. Classic.</p>
@@ -92,7 +99,7 @@ const Hero = () => {
                 Sip the Spirit <br /> of Summer
               </p>
             </div>
-
+            
             <div className="view-cocktails">
               <p className="subtitle">
                 Every cocktail on our menu is a blend of premium ingredients,
@@ -106,15 +113,16 @@ const Hero = () => {
       </section>
       <div className="video absolute inset-0">
         <video
-          src="/videos/output.mp4"
+          src="/videos/input.mp4"
           ref={videoRef}
+          autoPlay
           preload="auto"
           muted
           playsInline
         />
       </div>
     </>
-  )
+  );
 }
 
 export default Hero
