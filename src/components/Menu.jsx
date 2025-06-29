@@ -41,7 +41,7 @@ const Menu = () => {
       <h2 id='menu-heading' className='sr-only'>
         Cocktail Menu
       </h2>
-      <nav className='cocktail-tabs' aria-label='Cocktail Navigation'>
+      <nav className='project-tabs' aria-label='Cocktail Navigation'>
         {sliderLists.map((cocktail, index) => {
           const isActive = index === currentIndex;
 

@@ -6,8 +6,6 @@ import {useMediaQuery} from "react-responsive";
 import { useRef } from 'react';
 
 const Hero = () => {
-  const videoRef = useRef();
-  const videoTimelineRef =useRef()
   const isMobile = useMediaQuery({maxWidth: 767});
 
   useGSAP(() => {
@@ -20,7 +18,7 @@ const Hero = () => {
       yPercent: 100,
       duration: 1.5,
       ease: 'expo.out',
-      stagger: 0.05,
+      stagger: 0.1,
     });
 
     gsap.from(paragraphSplit.lines, {
@@ -58,18 +56,14 @@ const Hero = () => {
         pin: true,
       }
     })
-    videoRef.current.onloadedmetadata = () => {
-      tl.to(videoRef.current, {
-        currentTime: videoRef.current.duration,
-      })
-    }
+
 
   }, []);
 
   return (
     <> 
       <section id="hero" className="noisy">
-        <h1 className="title">mojito</h1>
+          <h1 className="title">PRECISE</h1>
 
         <img
           src="/images/hero-left-leaf.png"
@@ -87,28 +81,22 @@ const Hero = () => {
 
           <div className="content">
             <div className="space-y-20 hidden md:block">
-              <p>Cool. Crisp. Classic.</p>
+              <p>Civil Engineering limited</p>
               <p className="subtitle">
-                Sip the Spirit <br /> of Summer
+                Residential and <br />  commercial projects
               </p>
             </div>
 
-            <div className="view-cocktails">
-              <p className="subtitle">Every cocktail on our menu is a blend of premium ingredients, creative flair, and timeless recipes — designed to delight your senses</p>
-              <a href="#cocktails">View cocktails</a>
+            <div className="view-projects">
+              <p className="subtitle">Registered in Kenya. With experience of over Ten years
+                in engineering practice, considerable
+                experience in the design, and construction supervision of wide range
+                of projects</p>
+              <a href="#projects">View projects</a>
             </div>
           </div>
         </div>
       </section>
-      <div className="video absolute inset-0">
-        <video
-          src="/videos/output.mp4"
-          ref={videoRef}
-          preload="auto"
-          muted
-          playsInline
-        />
-      </div>
     </>
   )
 }

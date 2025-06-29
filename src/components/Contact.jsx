@@ -37,18 +37,19 @@ const Contact = () => {
 
     return (
         <footer id='contact'>
-            <img src = '/images/footer-right-leaf.png' alt={'leaf-right'} id={'f-right-leaf'}/>
+            <img src = '/images/engineer.png' alt={'leaf-right'} id={'engineer'}/>
             <img src = '/images/footer-left-leaf.png' alt={'leaf-left'} id={'f-left-leaf'}/>
             <div className='content' >
                 <h2>Where To Find Us</h2>
                 <div>
-                    <h3>Visit our Bar</h3>
-                    <p>Mayor Road 15, Ongata Rongai </p>
+                    <h3>Visit our office</h3>
+                    <p>AKAI Plaza, Suite No. 10 </p>
+                    <p>Garden Estate Road, off Thika Road</p>
                 </div>
                 <div>
                     <h3>Call Us</h3>
-                    <p>+63 917 234 5678</p>
-                    <p>hello@mojitos.com</p>
+                    <p>+254 114 790 332 , +254 724 117 520</p>
+                    <p>info@preciseeng.co.ke</p>
                 </div>
                 <div>
                     <h3>Open Every Day</h3>
@@ -74,6 +75,8 @@ const Contact = () => {
                 </div>
             </div>
         </footer>
-    )
+
+
+)
 }
 export default Contact

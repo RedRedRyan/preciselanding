@@ -8,6 +8,7 @@ import About from './components/About';
 import Art from './components/Art';
 import Menu from './components/Menu';
 import Contact from "./components/Contact.jsx";
+import Waves from "./blueprint/Waves.jsx";
 
 
 
@@ -19,13 +20,42 @@ const App = () => {
     <main>
       <Navbar />
       <Hero />
-      <Cocktails />
       <About />
       <Art />
       <Menu />
         <Contact />
+        <Waves
+
+            lineColor="#fff"
+
+            backgroundColor="rgba(255, 255, 255, 0.2)"
+
+            waveSpeedX={0.02}
+
+            waveSpeedY={0.01}
+
+            waveAmpX={40}
+
+            waveAmpY={20}
+
+            friction={0.9}
+
+            tension={0.01}
+
+            maxCursorMove={120}
+
+            xGap={12}
+
+            yGap={36}
+
+        />
+        <footer>
+            <div >
+                <p>&copy; 2025 Ystudios. All Rights Reserved.</p>
+            </div>
+        </footer>
     </main>
-  ) 
+  )
 }
 
 export default App

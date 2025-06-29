@@ -14,8 +14,8 @@ const Navbar = () => {
 
     });
     navTween.fromTo("nav", {backgroundColor: "transparent"},{
-      backgroundColor: '#00000050',
-      backgrroundFilter: "blur(10px)",
+      backgroundColor: '#a1201a',
+      backgroundFilter: "blur(10px)",
       duration: 1,
       ease: "power1.inOut",
     });
@@ -26,13 +26,15 @@ const Navbar = () => {
       <div>
       <a href="#home" className ="flex items-center gap-2">
         <img src = "/images/logo.png" alt="logo" />
-        <p>Velvet Pour</p>
+        <p>Precise</p>
       </a>
       <ul>
         {navLinks.map((link) => (
+            <div>
           <li key={link.id}>
             <a href={`#${link.id}`} > {link.title}</a>
           </li>
+            </div>
         ))}
         </ul>
       </div>

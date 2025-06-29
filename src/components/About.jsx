@@ -2,8 +2,12 @@ import React from 'react'
 import {useGSAP} from "@gsap/react";
 import  gsap  from 'gsap';
 import { SplitText } from "gsap/all";
+import CountUp from "../blueprint/CountUp.jsx";
+import RotatingText from "../blueprint/RotatingText.jsx";
+import CircularGallery from "../blueprint/CircularGallery.jsx";
 
 const About = () => {
+
     useGSAP(()=>{
         const titleSplit = SplitText.create('#about h2',{
             type: 'words'
@@ -35,23 +39,53 @@ const About = () => {
         <div className='mb-16 md:px-0 px-5'>
             <div className='content'>
                 <div className='md:col-span-8'>
-                    <p className ='badge'>Best cocktails</p>
+                    <p className ='badge'>Precise
+                        <RotatingText
+                        texts={['Structures', 'Construction', 'Buildings', 'Engineering']}
+                        mainClassName="px-2 sm:px-2 md:px-3 bg-black text-white text-lg sm:text-xl md:text-2xl overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
+                        staggerFrom={"last"}
+                        initial={{ y: "100%" }}
+                        animate={{ y: 0 }}
+                        exit={{ y: "-120%" }}
+                        staggerDuration={0.025}
+                        splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+                        transition={{ type: "spring", damping: 30, stiffness: 400 }}
+                        rotationInterval={2500}
+                    />
+                    </p>
                     <h2>
-                        Where every detail matters <span className='text-white'></span>
-                        from muddle to garnish
+                        Embracing Technology Solutions <span className='text-white'></span>
+                        for any Building Project
                     </h2>
                 </div>
                 
                 <div className='sub-content'>
                     <p>
-                        At Maji, we believe that every cocktail tells a story. Our expert mixologists meticulously craft each drink. Join us in celebrating the art of cocktail making, where passion meets precision.
+                        Provide comprehensive
+
+                        design and engineering
+
+                        solutions and ensuring
+
+                        excellence to efficiently
+
+                        deliver high quality service
+
+                        and value to our clients
                     </p> 
                     <div>
                     <p className='md:text-3xl text-xl font-bold'>
                         <span>4.5</span>/5
                     </p>
                     <p className='text-sm text-white-100'>
-                        More than +12000 customers
+                        <CountUp
+                            from={0}
+                            to={253}
+                            separator=","
+                            direction="up"
+                            duration={2}
+                            className="count-up-text"
+                        /> customers
                     </p> 
                 </div> 
                 </div>
@@ -59,21 +93,22 @@ const About = () => {
         </div>
         <div className='top-grid'>
             <div className='md:col-span-3'>
-            <div className='noisy'/>
+            <div className='clear'/>
             <img src = '/images/abt1.png' alt='grid-img-1'/>
             </div>
 
             <div className='md:col-span-6'>
-            <div className='noisy'/>
+            <div className='clear'/>
             <img src = '/images/abt2.png' alt='grid-img-2'/>
             </div>
 
             <div className='md:col-span-3'>
-            <div className='noisy'/>
+            <div className='clear'/>
             <img src = '/images/abt5.png' alt='grid-img-5'/>
             </div>
 
         </div>
+
 
 
         <div className='bottom-grid'>
@@ -85,6 +120,15 @@ const About = () => {
             <div className='md:col-span-4'>
             <div className='noisy'/>
             <img src = '/images/abt4.png' alt='grid-img-4'/>
+            </div>
+
+        </div>
+        <div className='gallery'>
+
+            <div className='clear'>
+                <div style={{ height: '600px', position: 'relative' }}>
+                    <CircularGallery bend={3} textColor="#ffffff" borderRadius={0.05} />
+                </div>
             </div>
         </div>
         </div>

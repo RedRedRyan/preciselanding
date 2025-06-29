@@ -1,7 +1,7 @@
 const navLinks = [
     {
-       id: "cocktails",
-       title: "Cocktails",
+       id: "projects",
+       title: "Projects",
     },
     {
        id: "about",
@@ -9,7 +9,7 @@ const navLinks = [
     },
     {
        id: "work",
-       title: "The Art",
+       title: "Work",
     },
     {
        id: "contact",
@@ -87,17 +87,17 @@ const navLinks = [
    ];
    
    const featureLists = [
-    "Perfectly balanced blends",
-    "Garnished to perfection",
-    "Ice-cold every time",
-    "Expertly shaken & stirred",
+    "Building structural design",
+    "Structural analysis and assessment",
+    "Retrofitting and rehabilitation",
+    "Earthquake-resistant design",
    ];
    
    const goodLists = [
-    "Handpicked ingredients",
-    "Signature techniques",
-    "Bartending artistry in action",
-    "Freshly muddled flavors",
+    "Site development planning",
+    "Roads and drainage design",
+    "Water and sewerage systems",
+    "Earthworks and grading",
    ];
    
    const storeInfo = {
@@ -137,35 +137,35 @@ const navLinks = [
    const sliderLists = [
     {
        id: 1,
-       name: "Classic Mojito",
+       name: "Green Designs",
        image: "/images/drink1.png",
-       title: "Simple Ingredients, Bold Flavor",
+       title: "Environmental friendly,",
        description:
-        "Made with tequila, lime juice, and orange liqueur, the Margarita is easy to make and full of character. Add a salted rim for the perfect drink on summer nights.",
+        "Cutting-edge engineering with ecological responsibility to deliver projects that stand the test of time while protecting our planet.",
     },
     {
        id: 2,
-       name: "Raspberry Mojito",
+       name: "Technology",
        image: "/images/drink2.png",
-       title: "A Zesty Classic That Never Fails",
+       title: "Building Smarter with Cutting-Edge Tools",
        description:
-        "The Margarita is a classic that balances tangy lime, smooth tequila, and a touch of sweetness. Shaken, frozen, or on the rocks—it’s always crisp & refreshing.",
+        "Our secret? Advanced tools like drone surveys and 3D modeling so you can virtually walk through your project before we break ground. We're not just building structures - we're building your confidence with every laser-precise measurement",
     },
     {
        id: 3,
-       name: "Violet Breeze",
+       name: "Certified Excellence",
        image: "/images/drink3.png",
-       title: "Simple Ingredients, Bold Flavor",
+       title: "Licensed, bonded, and award-winning",
        description:
-        "Made with tequila, lime juice, and orange liqueur, the Margarita is easy to make and full of character. Add a salted rim for the perfect drink on summer nights.",
+        "As a fully licensed, bonded, and insured firm with multiple industry awards, we bring proven excellence to every project. Our team maintains rigorous certifications.",
     },
     {
        id: 4,
-       name: "Curacao Mojito",
+       name: "Wide Scope",
        image: "/images/drink4.png",
-       title: "Crafted With Care, Poured With Love",
+       title: "From skyscrapers to suburban streets",
        description:
-        "Each cocktail is made with fresh ingredients and a passion for perfecting every pour, whether you're celebrating or simply relaxing.",
+        "For projects of all scales. No matter the sector, we combine innovation with rigorous standards to turn complex challenges into enduring success.",
     },
    ];
    
