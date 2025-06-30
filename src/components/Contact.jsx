@@ -74,6 +74,11 @@ const Contact = () => {
                     ))}
                 </div>
             </div>
+
+                <div >
+                    <p>Powered by Ystudios &copy;  All Rights Reserved.</p>
+                </div>
+
         </footer>
 
 

@@ -39,8 +39,8 @@ const Hero = () => {
         scrub: true,
       }
     })
-    .to('.right-leaf', {y: 200}, 0)
-    .to('.left-leaf', {y: -200}, 0);
+    .to('.right-leaf', {y: 1000}, 0)
+    .to('.left-leaf', {y: -500}, 0);
 
     // Video animation timeline
     const startValue = isMobile ? 'top 50%' : 'center 60%';
@@ -66,12 +66,12 @@ const Hero = () => {
           <h1 className="title">PRECISE</h1>
 
         <img
-          src="/images/hero-left-leaf.png"
+          src="/images/cone.png"
           alt="left-leaf"
           className="left-leaf"
         />
         <img
-          src="/images/hero-right-leaf.png"
+          src="/images/globe.png"
           alt="right-leaf"
           className="right-leaf"
         />
@@ -92,7 +92,7 @@ const Hero = () => {
                 in engineering practice, considerable
                 experience in the design, and construction supervision of wide range
                 of projects</p>
-              <a href="#projects">View projects</a>
+              <a href="#menu">View services</a>
             </div>
           </div>
         </div>

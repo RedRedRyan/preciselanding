@@ -49,11 +49,7 @@ const App = () => {
             yGap={36}
 
         />
-        <footer>
-            <div >
-                <p>&copy; 2025 Ystudios. All Rights Reserved.</p>
-            </div>
-        </footer>
+
     </main>
   )
 }
